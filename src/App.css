@@ -1,38 +1,250 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-fluid {
+  padding: 0 !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* --------- navbar start --------- */
+header {
+  padding: 18px 35px 18px 25px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  border-bottom: 1px solid rgb(226, 226, 226);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav div p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.links ul {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links ul li a {
+  margin-right: 22px;
+  text-decoration: none;
+  color: black;
+}
+
+.links ul li:last-child a {
+  margin: 0;
+  color: #4285F4;
+}
+
+.links ul li:last-child:hover a {
+  color: #fff;
+}
+
+.sign-up {
+  border: 1px solid #4285F4;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+.sign-up:hover {
+  background-color: #4285F4;
+}
+
+/* --------- navbar end --------- */
+
+/* --------- Main-content start --------- */
+
+.container {
+  max-width: 990px !important;
+  /* background-color: antiquewhite; */
+}
+
+.main-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.headind-text {
+  text-align: center;
+  padding: 58px 0 24px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.headind-text P {
+  font-size: 21px;
+  font-weight: 100;
+}
+
+.cards-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.pricecard {
+  width: 300px !important;
+  text-align: center;
+  padding: 0 !important;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  margin: 15px 20px 20px 0;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.pricecard h4 {
+  text-transform: capitalize;
+  padding: 12px 0;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #e2e2e2;
+  font-weight: 400;
+}
+
+.pricecard h2 {
+  font-size: 38px;
+  margin: 20px 0;
+}
+
+.pricecard span {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.pricecard p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.pricecard .hover-eff-btn {
+  width: 260px;
+  margin: 22px 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #027bff;
+  font-size: 21px;
+  color: #027bff;
+  padding: 7px 0;
+  border-radius: 7px;
+}
+
+.pricecard .hover-eff-btn:hover {
+  background-color: #027bff;
+  color: #fff;
+}
+
+.pricecard .normal-eff-btn {
+  width: 260px;
+  margin: 22px 0;
+  border: none;
+  outline: none;
+  background-color: #027bff;
+  border: 1px solid #027bff;
+  font-size: 21px;
+  color: #fff;
+  padding: 7px 0;
+  border-radius: 7px;
+}
+
+.pricecard .normal-eff-btn:hover {
+  background-color: #0070e8;
+  color: #fff;
+}
+
+/* --------- Main-content end --------- */
+
+/* --------- Footer start --------- */
+
+footer {
+  margin: 50px 0;
+  display: flex;
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: #6c757d;
+}
+
+.BS-logo {
+  width: 100px;
+}
+
+.BS-logo p {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+footer ul li:hover a {
+  text-decoration: underline;
+  color: #6c757d;
+}
+
+.footer-data {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+/* --------- Footer end --------- */
+
+/* --------- Media-Queries start --------- */
+
+@media (min-width:320px) and (max-width:567px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .links {
+    margin-top: 20px;
+  }
+
+  .links ul {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  .links ul li {
+    margin-bottom: 20px;
+  }
+
+  .links ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-data {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
   }
 }
+
+/* --------- Media-Queries end --------- */
